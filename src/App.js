@@ -11,6 +11,7 @@ import SignUp from "./Components/SignUp";
 import Login from "./Components/Login";
 import Dashboard from "./Components/Dashboard";
 import PrivateRoutes from "./Components/PrivateRoutes";
+import Products from "./Components/Products";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
           </Route>
           <Route path="/signup" element={<SignUp></SignUp>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
-
+          <Route path="/products" element={<Products></Products>}></Route>
           {/**private route */}
 
           <Route path="user" element={<PrivateRoutes />}>

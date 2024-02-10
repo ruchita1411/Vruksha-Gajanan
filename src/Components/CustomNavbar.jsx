@@ -45,15 +45,18 @@ function CustomNavbar() {
           <Nav className="me-auto" navbar></Nav>
 
           <Nav>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Products
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>Idols</DropdownItem>
-                <DropdownItem>Decorations</DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
+            {/*<UncontrolledDropdown nav inNavbar>
+            <DropdownToggle nav caret>
+              Products
+            </DropdownToggle>
+            <DropdownMenu right>
+              <DropdownItem>Idols</DropdownItem>
+              <DropdownItem>Decorations</DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>*/}
+            <NavItem>
+              <NavLink href="/products/">Products</NavLink>
+            </NavItem>
             <NavItem>
               <NavLink href="/vision/">Our Vision</NavLink>
             </NavItem>
