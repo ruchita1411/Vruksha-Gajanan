@@ -47,7 +47,7 @@ const Login = () => {
     <Base>
       <Container>
         <Row>
-          <Col md={{ size: 8, offset: 3 }}>
+          <Col md={{ size: 6, offset: 3 }}>
             <Card color="light" className="m-3 shadow-lg">
               <CardHeader>
                 <h4 className="text-center m-3 text-success">LOGIN</h4>

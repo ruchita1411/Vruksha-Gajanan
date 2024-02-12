@@ -1,11 +1,8 @@
-import "./App.css";
 import Home from "./Components/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 
-import Navbar from "./Components/CustomNavbar";
-import CustomNavbar from "./Components/CustomNavbar";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import SignUp from "./Components/SignUp";
 import Login from "./Components/Login";

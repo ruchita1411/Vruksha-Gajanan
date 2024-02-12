@@ -27,7 +27,7 @@ function CustomNavbar() {
         fixed="marginTop"
         color="light"
         expand="md"
-        className=" navbar px-5 shadow-sm "
+        className=" navbar px-5 shadow-lg navbar-fixed-top"
       >
         <NavbarBrand href="/" className="px-10 text-success">
           <img

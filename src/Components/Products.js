@@ -1,35 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import Base from "./Base";
 import ProductData from "./ProductData";
+import "./Products.css";
+import ProductList from "./ProductList";
 
 const Products = () => {
+  const [products, setProducts] = useState(ProductData);
   return (
     <Base>
-      <div className="container mt-5">
-        {ProductData.map((currElm) => {
-          return (
-            <>
-              <div className="row">
-                <div className="col-md-3">
-                  <div className="col-md-12">
-                    <img
-                      className=" img-fluid"
-                      src={currElm.img}
-                      alt={currElm.title}
-                    />
-                  </div>
-                  <div className="detail">
-                    <div className="info">
-                      <h3>{currElm.title}</h3>
-                      <p>{currElm.price}</p>
-                    </div>
-                    <button>View</button>
-                  </div>
-                </div>
-              </div>
-            </>
-          );
-        })}
+      <div className="Container" style={{ marginTop: "4rem" }}>
+        {products.map((product) => (
+          <ProductList
+            keys={product.id}
+            img={product.img}
+            title={product.title}
+            price={product.price}
+            des={product.des}
+          ></ProductList>
+        ))}
       </div>
     </Base>
   );

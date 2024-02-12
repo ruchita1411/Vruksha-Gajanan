@@ -69,9 +69,9 @@ const SignUp = () => {
     <Base>
       <Container>
         <Row>
-          <Col md={{ size: 8, offset: 2 }}>
+          <Col md={{ size: 7, offset: 3 }}>
             <Card
-              className="shadow-sm mt-3"
+              className="shadow-lg m-4"
               color="light"
               style={{ marginLeft: 150 }}
             >
