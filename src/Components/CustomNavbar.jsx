@@ -27,7 +27,7 @@ function CustomNavbar() {
         fixed="marginTop"
         color="light"
         expand="md"
-        className=" navbar px-5 shadow-lg navbar-fixed-top"
+        className=" navbar px-5 shadow-lg navbar-fixed-top "
       >
         <NavbarBrand href="/" className="px-10 text-success">
           <img
@@ -42,7 +42,7 @@ function CustomNavbar() {
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="me-auto" navbar></Nav>
+          <Nav className="me-auto  "></Nav>
 
           <Nav>
             {/*<UncontrolledDropdown nav inNavbar>

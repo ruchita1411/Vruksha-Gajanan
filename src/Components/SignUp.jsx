@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 import {
   Container,
   Row,
@@ -11,8 +11,11 @@ import {
 } from "reactstrap";
 import { createUser } from "./Services/UserService";
 import Base from "./Base";
+import axios from "axios";
 
 const SignUp = () => {
+  const navigate = useNavigate();
+
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -64,6 +67,20 @@ const SignUp = () => {
         alert("error");
         console.log("error");
       });
+  };
+
+  const handleSignUp = async () => {
+    console.log(user);
+    try {
+      const res = await axios.post("http://localhost:8080/user/create", user);
+      if (res.status !== 201) {
+        console.log(res);
+        return;
+      }
+      navigate("/login");
+    } catch (err) {
+      console.log(err);
+    }
   };
   return (
     <Base>
@@ -212,7 +229,9 @@ const SignUp = () => {
                     <label for="exampleInputPassword2">Confirm Password</label>
                     <input
                       value={user.confirm}
-                      onChange={(event) => onFieldChange(event, "confirm")}
+                      onChange={(event) =>
+                        onFieldChange(event, "confirmPassword")
+                      }
                       type="password"
                       class="form-control"
                       id="exampleInputPassword2"
@@ -234,9 +253,10 @@ const SignUp = () => {
                   </div>
                   <div class="form-check" style={{ marginLeft: 10 }}></div>
                   <button
-                    type="submit"
+                    type="button"
                     class="btn btn-success"
                     style={{ marginLeft: 10 }}
+                    onClick={handleSignUp}
                   >
                     Submit
                   </button>

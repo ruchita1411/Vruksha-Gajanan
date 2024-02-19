@@ -1,3 +1,10 @@
-.carousel {
-  width: 100;
+Container {
+  display: flex;
+}
+
+img {
+  margin-left: 100px;
+  width: 1100px;
+  height: 500px;
+  object-fit: contain;
 }
