@@ -1,41 +1,25 @@
 import React from "react";
+import Carousel from "react-bootstrap/Carousel";
 import img1 from "../images/carousel1.jpg";
 import img2 from "../images/carousel2.jpg";
 import "../Components/Home.css";
 import Base from "./Base";
-import { CardBody, Container } from "reactstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 const Home = () => {
-  const [activeIndex, setActiveIndex] = React.useState(0);
-  const items = [
-    {
-      title: "Carousel 1",
-      icon: img1,
-    },
-    {
-      title: "Carousel 2",
-      icon: img1,
-    },
-    {
-      title: "Carousel 3",
-      icon: img1,
-    },
-  ];
   return (
     <Base>
-      {items.map((item) => {
-        return (
-          <div className="carousel">
-            <Container>
-              <CardBody className="m-3">
-                <div>
-                  <img src={item.icon} alt="loading.." className="slides"></img>
-                  ;
-                </div>
-              </CardBody>
-            </Container>
-          </div>
-        );
-      })}
+      <Carousel>
+        <Carousel.Item>
+          <img className="d-block w-100" src={img1} alt="loading.."></img>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-100" src={img1} alt="loading.."></img>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-100" src={img1} alt="loading.."></img>
+        </Carousel.Item>
+      </Carousel>
     </Base>
   );
 };

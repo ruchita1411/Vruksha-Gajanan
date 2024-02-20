@@ -2,7 +2,7 @@ ProductList .container {
   max-width: 100%;
   justify-content: center;
 }
-.pic img {
+ProductList .pic img {
   width: 300px;
   height: 300px;
   object-fit: contain;
@@ -10,7 +10,7 @@ ProductList .container {
   border-color: green;
   object-fit: contain;
 }
-img:hover {
+ProductList .img:hover {
   /* transform: scale(1.2); */
   object-fit: cover;
   cursor: pointer;

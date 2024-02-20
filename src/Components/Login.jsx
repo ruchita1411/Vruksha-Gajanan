@@ -72,7 +72,7 @@ const Login = () => {
                 <Form onSubmit={loginFormSubmit}>
                   <div className="m-3">
                     <Label id="name" for="email">
-                      email{" "}
+                      Email{" "}
                     </Label>
                     <Input
                       value={loginData.email}
